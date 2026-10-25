@@ -1,0 +1,1 @@
+Trabalho final da disciplina Tópicos Especiais em Inteligência Artificial, aonde desenvolvo um sistema de classificação automática de reclamações por assunto usando PLN
