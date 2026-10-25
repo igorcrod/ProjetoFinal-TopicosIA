@@ -1,1 +1,1 @@
-Trabalho final da disciplina Tópicos Especiais em Inteligência Artificial, aonde desenvolvo um sistema de classificação automática de reclamações por assunto usando PLN
+Trabalho final da disciplina Tópicos Especiais em Inteligência Artificial, aonde desenvolvo um sistema de classificação automática de reclamações por assunto usando PLN para processamento de textos, e DNN para classificação
