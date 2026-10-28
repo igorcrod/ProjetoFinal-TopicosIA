@@ -50,3 +50,10 @@ Instale as dependências necessárias no ambiente:
 
 ```bash
 pip install tensorflow pandas numpy scikit-learn nltk pypdf gradio
+
+### 2. Execução do Projeto
+
+Abra o arquivo do notebook (.ipynb) no Google Colab.
+Faça o upload dos datasets (B2W-Reviews01.csv, RePro.csv, corpusbuscape.zip) quando solicitado pela célula inicial.
+Execute todas as células em sequência para carregar os dados, aplicar o PLN, treinar a DNN e iniciar a interface.
+Ao final da execução da última célula, a interface web do Gradio será renderizada diretamente no notebook, além de gerar um link público temporário (.gradio.live).
