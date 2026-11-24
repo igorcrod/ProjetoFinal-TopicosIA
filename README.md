@@ -173,16 +173,6 @@ ProjetoFinal-TopicosIA/
 
 ---
 
-### Opção 2: Executando via Arquivo Executável (.exe)
-
-1. Acesse a aba **Releases** do repositório no GitHub (`[suspicious link removed]`).
-2. Baixe a versão compactada **`app.zip`** (ou o arquivo `app.exe`).
-3. Extraia o conteúdo em uma pasta no seu computador.
-4. Clique duas vezes no arquivo **`app.exe`**.
-5. O terminal abrirá inicializando os serviços e a interface carregará no navegador padrão.
-
----
-
 ## ⚙️ Como Compilar o Executável (PyInstaller / Auto Py to Exe)
 
 Caso faça alterações no código e deseje gerar o `.exe` novamente:
