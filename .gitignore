@@ -1,0 +1,7 @@
+corpusbuscape.zip
+reviews/
+__pycache__/
+*.exe
+_internal/
+build/
+dist/
