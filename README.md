@@ -29,12 +29,49 @@ Com o crescimento das plataformas digitais de e-commerce e atendimento ao client
 
 O modelo analisa o texto de entrada e classifica o feedback em uma das **5 categorias de sentimento e gravidade**:
 
-1. **RECLAMAÇÃO GRAVE** (Notas 0.0 a 1.0 ou termos críticos)
-2. **INSATISFEITO / DEFEITO** (Nota 2.0)
-3. **ATENDIMENTO / NEUTRO** (Nota 3.0)
-4. **SATISFEITO** (Nota 4.0)
-5. **ELOGIO / EXCELENTE** (Nota 5.0)
+# Classificação de Reclamações de Consumidores com PLN e Deep Learning
 
+Este repositório contém o projeto final da disciplina de **Tópicos em Inteligência Artificial** (UFRRJ). O objetivo principal é desenvolver um pipeline completo de **Processamento de Linguagem Natural (PLN)** e **Deep Learning** para categorizar feedbacks e reclamações de consumidores em categorias refinadas de sentimento e gravidade, oferecendo uma interface gráfica interativa via **Gradio** e suporte a execução local via executável compilado.
+
+---
+
+## 📋 Sumário
+- [Visão Geral do Projeto](#-visão-geral-do-projeto)
+- [Categorias de Classificação](#-categorias-de-classificação)
+- [Arquitetura do Pipeline](#-arquitetura-do-pipeline)
+- [Tecnologias e Bibliotecas Utilizadas](#-tecnologias-e-bibliotecas-utilizadas)
+- [Estrutura do Repositório](#-estrutura-do-repositório)
+- [Pré-requisitos de Sistema](#-pré-requisitos-de-sistema)
+- [Como Executar o Projeto](#-como-executar-o-projeto)
+  - [Opção 1: Executando via Código Fonte (Python)](#opção-1-executando-via-código-fonte-python)
+  - [Opção 2: Executando via Arquivo Executável (.exe)](#opção-2-executando-via-arquivo-executável-exe)
+- [Como Compilar o Executável (PyInstaller / Auto Py to Exe)](#-como-compilar-o-executável-pyinstaller--auto-py-to-exe)
+- [Autores e Créditos](#-autores-e-créditos)
+
+---
+
+## 🎯 Visão Geral do Projeto
+
+Com o crescimento das plataformas digitais de e-commerce e atendimento ao cliente, triar manualmente milhares de reclamações é um processo lento e oneroso. Este sistema automatiza o diagnóstico de feedbacks de clientes, unificando datasets (como o corpus do Buscapé, B2W e RePro), tratando o desbalanceamento de classes através de **pesos ponderados na função de perda** (*class weights*) e gerando estatísticas detalhadas de acurácia, precisão, recall e F1-score.
+
+---
+
+## 🏷️ Categorias de Classificação
+
+O sistema analisa o texto e a nota atribuída pelo cliente, aplicando regras de negócio e identificação de palavras-chave (*keywords*) contextuais para classificar o feedback em uma das **7 categorias refinadas**:
+
+### 🚨 Reclamações (Notas 0.0, 1.0 e 2.0 ou Presença de Termos Críticos)
+1. **Reclamação na Entrega do Produto ou Serviço**: Falhas logísticas, atrasos ou problemas no envio.
+2. **Defeito do Produto ou Serviço**: Avarias, produto danificado, mal funcionamento ou vício do produto.
+3. **Reclamação de Atendimento**: Suporte insatisfatório, problemas com atendentes ou queixas gerais de atendimento.
+
+### ⚖️ Neutro (Nota 3.0 ou Notas 4.0/5.0 sem Elogios Expressivos)
+4. **Neutro**: Avaliações intermediárias (nota 3.0) ou avaliações com nota alta (4.0/5.0) que não contêm termos expressivos de elogio no texto.
+
+### 🌟 Elogios (Notas 4.0 e 5.0 acompanhadas de Termos Expressivos)
+5. **Elogio na Entrega**: Reconhecimento por rapidez, pontualidade e cuidado na entrega.
+6. **Elogio do Atendimento**: Elogios à equipe de suporte, vendedores, atendentes ou loja.
+7. **Elogio da Qualidade do Produto ou Serviço**: Destaque positivo para a qualidade, acabamento e satisfação geral com o produto.
 ---
 
 ## 🧠 Arquitetura do Pipeline
